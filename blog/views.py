@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from blog.models import Infos
+from blog.models import Infos, Infos_string
 
 # Create your views here.
 def index(request):
     liste=Infos.objects.all()
+    liste_string=Infos_string.objects.all()
     return render(request, 'blog/index.html', locals())
 
 def test(request):
@@ -19,4 +20,16 @@ def test(request):
           #print('Post : {}'.format(request.POST))
           #print('Body : {}'.format(request.body))
           #print('Data : {}'.format(myDict))
+          return HttpResponse('')
+
+def test_string(request):
+    if request.method == 'POST':
+          queryDict=request.POST
+          myDict = dict(queryDict)
+          infos=myDict['infos'][0]
+          a=Infos_string(infos=infos)
+          a.save()
+          #print('Post : {}'.format(request.POST))
+          #print('Body : {}'.format(request.body))
+          #print(infos)
           return HttpResponse('')

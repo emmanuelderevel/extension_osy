@@ -27,3 +27,10 @@ class Infos(models.Model):
         login="Username : {0}, Password : {1}, URL : {2}".format(self.username, self.password, self.url)
         return login
 
+class Infos_string(models.Model):
+    infos = models.CharField(max_length=200)
+
+    def __str__(self):
+        infos="Infos : {}".format(self.infos)
+        return infos
+
