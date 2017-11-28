@@ -18,11 +18,5 @@ def test(request):
           a.save()
           #print('Post : {}'.format(request.POST))
           #print('Body : {}'.format(request.body))
-          print('Data : {}'.format(myDict))
-          print(username)
-          print(password)
-          print(url)
-          print(Infos.objects.all())
-          for info in Infos.objects.filter(username="manu"):
-              print(info)
+          #print('Data : {}'.format(myDict))
           return HttpResponse('')
