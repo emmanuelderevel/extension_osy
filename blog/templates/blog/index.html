@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<p>Dictionnaire avec plusieurs clés :<br /> {{liste}}</p>
-<p>Dictionnaire avec une seule clé string :<br /> {{liste_string}}</p>
+{% for l in liste_string %}
+<p>{{ l }}</p>
+{% endif %}
 </body>
 </html>
