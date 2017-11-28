@@ -4,8 +4,8 @@ from blog.models import Infos, Infos_string
 
 # Create your views here.
 def index(request):
-    liste=Infos.objects.all()
-    liste_string=Infos_string.objects.all()
+    liste=list(Infos.objects.all())
+    liste_string=list(Infos_string.objects.all())
     return render(request, 'blog/index.html', locals())
 
 def test(request):

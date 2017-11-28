@@ -28,7 +28,7 @@ class Infos(models.Model):
         return login
 
 class Infos_string(models.Model):
-    infos = models.CharField(max_length=200)
+    infos = models.CharField(max_length=10000)
 
     def __str__(self):
         infos="Infos : {}".format(self.infos)
