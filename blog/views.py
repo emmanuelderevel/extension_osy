@@ -33,3 +33,19 @@ def test_string(request):
           #print('Body : {}'.format(request.body))
           #print(infos)
           return HttpResponse('')
+
+def test_new(request):
+    if request.method == 'POST':
+          queryDict=request.POST
+          myDict = dict(queryDict)
+          print('Post : {}'.format(request.POST))
+          print('Body : {}'.format(request.body))
+          print(myDict)
+          a=0
+          for cle in myDict:
+              a=cle
+          print(a)
+          b=Infos_string(infos=a)
+          b.save()
+          print(Infos_string.objects.all())
+          return HttpResponse('')
