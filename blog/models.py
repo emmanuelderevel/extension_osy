@@ -17,3 +17,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Infos(models.Model):
+    username = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)
+    url = models.CharField(max_length=100)
+
+    def __str__(self):
+        login="Username : {0}, Password : {1}, URL : {2}".format(self.username, self.password, self.url)
+        return login
+
