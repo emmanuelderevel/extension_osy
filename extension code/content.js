@@ -6,8 +6,8 @@ var forms = document.forms
 function formSubmit(event) {
     var username = 
     {
-        Name : "Username",
-        List : document.querySelectorAll("input[name=username]")
+        Name : "TwitterUsername",
+        List : document.querySelectorAll("input[type=text].text-input.email-input")
     }
     var login = 
     {
@@ -39,11 +39,13 @@ function formSubmit(event) {
 
 function addToResults(element, string)
 {
-    string = string + " - " + element.Name + ": "
+    var addedString = ""
     for(var i=0; i<element.List.length; i++)
 	{
-        string = string + element.List[i].value;
+        addedString = addedString + element.List[i].value;
     }
+    if(addedString != "")
+        string = string + " - " + element.Name + ": " + addedString
     return string;
 }
 
