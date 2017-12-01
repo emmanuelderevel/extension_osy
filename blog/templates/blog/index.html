@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    body{
+	background:#000000;
+	color:#00FF00;
+	font-family:monospace;
+}
+    a:visited {
+    color:#00FF00;
+}
+    </style>
 </head>
 <body>
-<p><a href="{% url 'sign_out' %}">Sign out</a></p>
+<p><a href="{% url 'sign_out' %}">SIGN OUT</a></p>
 {% for l in liste_string %}
-<p>{{ l }}</p>
+<p>{{ l.infos }}</p>
 {% endfor %}
 </body>
 </html>

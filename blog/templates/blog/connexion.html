@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Connexion</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<div class="bgimg-1 w3-display-container" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
+<div class="w3-display-middle">
 {% if error %}
 <p><strong>Unknown user or password incorrect</strong></p>
 {% endif %}
@@ -16,7 +16,6 @@
     <input type="hidden" name="next" value="{{next}}"/>
     <button class="w3-button w3-black w3-right w3-section" type="submit">SIGN IN</button>
 </form>
-    </div>
 </div>
 </body>
 </html>
